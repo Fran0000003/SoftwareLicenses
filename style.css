@@ -1,0 +1,460 @@
+
+/* =====================================
+   1. CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =====================================
+   2. HEADER
+===================================== */
+
+.header {
+    background: #172554;
+    color: white;
+    padding: 20px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+}
+
+.header h1 span {
+    color: #38bdf8;
+}
+
+.header nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* =====================================
+   3. HERO
+===================================== */
+
+.hero {
+    background: linear-gradient(135deg, #172554, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 85px 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: #38bdf8;
+    color: #172554;
+    padding: 13px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.hero-button:hover {
+    background: #7dd3fc;
+}
+
+
+/* =====================================
+   4. SECCIONES DE PRODUCTOS
+===================================== */
+
+.product-section {
+    padding: 55px 0;
+}
+
+.product-section h2 {
+    color: #172554;
+    font-size: 1.9rem;
+    margin-bottom: 8px;
+}
+
+.section-description {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+
+/* =====================================
+   5. CUADRÍCULA DE PRODUCTOS
+===================================== */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+
+/* =====================================
+   6. TARJETAS
+===================================== */
+
+.product-card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.13);
+}
+
+
+/* =====================================
+   7. IMÁGENES
+===================================== */
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+/* =====================================
+   8. INFORMACIÓN DEL PRODUCTO
+===================================== */
+
+.product-card h3 {
+    color: #172554;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+
+/* =====================================
+   9. DESCRIPCIONES
+===================================== */
+
+.product-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 12px 0 15px;
+}
+
+
+/* =====================================
+   10. ETIQUETAS
+===================================== */
+
+.product-featured {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #38bdf8;
+    color: #172554;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.product-discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ef4444;
+    color: white;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   11. PRECIOS
+===================================== */
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2563eb;
+    margin: 15px 0;
+}
+
+.product-old-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+
+/* =====================================
+   12. BOTÓN DE COMPRA
+===================================== */
+
+.buy-button {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.buy-button:hover {
+    background: #172554;
+}
+
+
+/* =====================================
+   13. BOTÓN ELIMINAR COMPRA
+===================================== */
+
+.delete-button {
+    width: 100%;
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.delete-button:hover {
+    background: #b91c1c;
+}
+
+
+/* =====================================
+   14. FILTROS
+===================================== */
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.filters input,
+.filters select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: white;
+}
+
+.filters input {
+    flex: 1;
+    min-width: 180px;
+}
+
+.filters select {
+    min-width: 200px;
+}
+
+.filters input:focus,
+.filters select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+
+/* =====================================
+   15. VENTANA DE COMPRA
+===================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+}
+
+#license-key {
+    display: block;
+    background: #f4f6f9;
+    padding: 15px;
+    border-radius: 6px;
+    color: #2563eb;
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.close-modal {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-modal:hover {
+    color: #ef4444;
+}
+
+
+/* =====================================
+   16. FOOTER
+===================================== */
+
+.footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+
+/* =====================================
+   17. RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .product-section {
+        padding: 35px 0;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters input,
+    .filters select {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.7rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-section h2 {
+        font-size: 1.5rem;
+    }
+
+}
